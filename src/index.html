@@ -4,102 +4,178 @@
     <meta charset="UTF-8" />
     <title>Maple 的个人博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <h1 class="site-title">Maple 的个人博客</h1>
-        <ul class="nav-list">
-          <li><a href="#">首页</a></li>
-          <li><a href="#">分类</a></li>
-          <li><a href="#">关于我</a></li>
+    <!--  Header + Navigation  -->
+    <header class="site-header">
+      <nav class="site-nav">
+        <h1 class="site-nav__title">Maple 的个人博客</h1>
+
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a href="#" class="site-nav__link site-nav__link--active">首页</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="#" class="site-nav__link">分类</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="#" class="site-nav__link">关于我</a>
+          </li>
         </ul>
       </nav>
     </header>
 
-    <main>
+    <!-- Main -->
+    <main class="site-main">
+      <!-- 博客简介区（Hero） -->
       <section aria-label="博客简介" class="hero">
         <h2>欢迎来到我的博客</h2>
         <p>这里记录了我在前端、Angular 和生活思考中的点滴。</p>
       </section>
 
       <div class="layout">
+        <!-- Post List -->
         <section aria-label="最新文章" class="post-list">
           <h2>最新文章</h2>
 
-          <article class="post-item">
+          <!-- Post Card Component -->
+          <article class="post-card">
             <header>
-              <h3 class="post-title">
-                <a href="./app/modules/article/post.html?id=1">深入理解 HTML 语义化</a>
+              <h3 class="post-card__title">
+                <a
+                  href="./app/modules/article/post.html?id=1"
+                  class="post-card__link"
+                >
+                  深入理解 HTML 语义化
+                </a>
               </h3>
-              <p class="post-meta">发表于 2025-11-24 · 分类：前端基础</p>
+              <p class="post-card__meta">发表于 2025-11-24 · 分类：前端基础</p>
             </header>
-            <p class="post-excerpt">
+
+            <p class="post-card__excerpt">
               很多人写 HTML 只是堆标签，但真正高质量的页面，关键在于语义……
             </p>
-            <a href="./app/modules/article/post.html?id=1" class="read-more">阅读全文 »</a>
-          </article>
 
-          <article class="post-item">
+            <a
+              href="./app/modules/article/post.html?id=1"
+              class="post-card__readmore"
+            >
+              阅读全文 »
+            </a>
+          </article>
+          <!-- End Component -->
+
+          <article class="post-card">
             <header>
-              <h3 class="post-title">
-                <a href="./app/modules/article/post.html?id=2">Angular 项目结构设计指南</a>
+              <h3 class="post-card__title">
+                <a
+                  href="./app/modules/article/post.html?id=2"
+                  class="post-card__link"
+                >
+                  Angular 项目结构设计指南
+                </a>
               </h3>
-              <p class="post-meta">发表于 2025-11-20 · 分类：Angular</p>
+              <p class="post-card__meta">发表于 2025-11-20 · 分类：Angular</p>
             </header>
-            <p class="post-excerpt">
+
+            <p class="post-card__excerpt">
               组件怎么拆？模块怎么划？service
               放哪？这篇文章用实战项目讲清楚这些问题……
             </p>
-            <a href="./app/modules/article/post.html?id=2" class="read-more">阅读全文 »</a>
+
+            <a
+              href="./app/modules/article/post.html?id=2"
+              class="post-card__readmore"
+            >
+              阅读全文 »
+            </a>
           </article>
 
-          <article class="post-item">
+          <article class="post-card">
             <header>
-              <h3 class="post-title">
-                <a href="./app/modules/article/post.html?id=3">写给自己的 2025 年复盘</a>
+              <h3 class="post-card__title">
+                <a
+                  href="./app/modules/article/post.html?id=3"
+                  class="post-card__link"
+                >
+                  写给自己的 2025 年复盘
+                </a>
               </h3>
-              <p class="post-meta">发表于 2025-11-15 · 分类：随笔</p>
+              <p class="post-card__meta">发表于 2025-11-15 · 分类：随笔</p>
             </header>
-            <p class="post-excerpt">
+
+            <p class="post-card__excerpt">
               一年又一年，用代码和文字记录自己的成长，也记录那些不想忘记的瞬间……
             </p>
-            <a href="./app/modules/article/post.html?id=3" class="read-more">阅读全文 »</a>
+
+            <a
+              href="./app/modules/article/post.html?id=3"
+              class="post-card__readmore"
+            >
+              阅读全文 »
+            </a>
           </article>
         </section>
 
+        <!-- Sidebar -->
         <aside class="sidebar">
+          <!-- Author Card Component -->
           <section class="author-card">
             <h2>关于作者</h2>
+
             <img
               src="assets/images/avatar.png"
               alt="作者头像"
-              class="author-avatar"
+              class="author-card__avatar"
             />
-            <p class="author-name">Maple</p>
-            <p class="author-bio">
+
+            <p class="author-card__name">Maple</p>
+
+            <p class="author-card__bio">
               前端工程师，热爱 Angular、TypeScript 和一切能让开发更优雅的东西。
             </p>
-            <ul class="author-links">
-              <li><a href="#" target="_blank">GitHub</a></li>
-              <li><a href="#" target="_blank">掘金</a></li>
+
+            <ul class="author-card__social">
+              <li>
+                <a href="#" target="_blank" class="author-card__social-link"
+                  >GitHub</a
+                >
+              </li>
+              <li>
+                <a href="#" target="_blank" class="author-card__social-link"
+                  >掘金</a
+                >
+              </li>
             </ul>
           </section>
+          <!-- End Component -->
 
+          <!-- Tags Component -->
           <section class="tag-section">
             <h2>标签</h2>
             <ul class="tag-list">
-              <li><a href="#">Angular</a></li>
-              <li><a href="#">TypeScript</a></li>
-              <li><a href="#">前端基础</a></li>
-              <li><a href="#">随笔</a></li>
+              <li class="tag-list__item">
+                <a class="tag-list__link" href="#">Angular</a>
+              </li>
+              <li class="tag-list__item">
+                <a class="tag-list__link" href="#">TypeScript</a>
+              </li>
+              <li class="tag-list__item">
+                <a class="tag-list__link" href="#">前端基础</a>
+              </li>
+              <li class="tag-list__item">
+                <a class="tag-list__link" href="#">随笔</a>
+              </li>
             </ul>
           </section>
+          <!-- End Component -->
         </aside>
       </div>
     </main>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="site-footer">
       <p>© 2025 Maple 的个人博客 · 由 Angular & 热爱驱动</p>
     </footer>
   </body>
